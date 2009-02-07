@@ -62,7 +62,7 @@ sub _build__software_license {
 
 override BUILDARGS => sub {
     my $args = super;
-    $args->{type} = $args->{extra_argv}->[0]
+    $args->{license} = $args->{extra_argv}->[0]
         if @{ $args->{extra_argv} };
     return $args;
 };
